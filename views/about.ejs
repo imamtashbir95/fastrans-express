@@ -1,56 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title><%= title %></title>
-        <meta name="description" content="FasTrans - Logistics & Delivery Company HTML template" />
-        <meta
-            name="keywords"
-            content="cargo, clean, contractor, corporate, freight, industry, localization, logistics, page builder, shipment, transport, transportation, truck, trucking"
-        />
-        <meta name="author" content="Themexriver" />
-        <link rel="shortcut icon" href="/img/logo/ficon.png" type="image/x-icon" />
-        <!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/fontawesome-all.css" />
-        <link rel="stylesheet" href="/css/flaticon.css" />
-        <link rel="stylesheet" href="/css/animate.css" />
-        <link rel="stylesheet" href="/css/nice-select.css" />
-        <link rel="stylesheet" href="/css/video.min.css" />
-        <link rel="stylesheet" href="/css/animated-slider.css" />
-        <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" href="/css/slick.css" />
-        <link rel="stylesheet" href="/css/rs6.css" />
-        <link rel="stylesheet" href="/css/slick-theme.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-    </head>
+    <%- include("partials/head") %>
     <body>
         <div id="preloader"></div>
         <div class="up">
             <a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
         </div>
-        <!-- Start of header section
-	============================================= -->
-        <%- include('partials/header') %>
-        <!-- End of header section
-	============================================= -->
+        <!-- Start of header section ======================================= -->
+        <%- include("partials/header") %>
+        <!-- End of header section ========================================= -->
 
-        <!-- Start of Breadcrumb section
-	============================================= -->
+        <!-- Start of Breadcrumb section =================================== -->
         <%- include("partials/breadcrumb", { pageTitle: "About" }) %>
-        <!-- End of Breadcrumb section
-	============================================= -->
+        <!-- End of Breadcrumb section ===================================== -->
 
-        <!-- Start of About section
-	============================================= -->
+        <!-- Start of About section ======================================== -->
         <%- include("partials/about") %>
-        <!-- End of About section
-	============================================= -->
+        <!-- End of About section ========================================== -->
 
-        <!-- Start of funfact section
-	============================================= -->
+        <!-- Start of funfact section ====================================== -->
         <section id="ft-funfact" class="ft-funfact-section">
             <div class="container">
                 <div class="ft-funfact-content">
@@ -103,11 +71,9 @@
                 </div>
             </div>
         </section>
-        <!-- End of funfact section
-	============================================= -->
+        <!-- End of funfact section ======================================== -->
 
-        <!-- Start of goodness feature section
-	============================================= -->
+        <!-- Start of goodness feature section ============================= -->
         <section id="ft-goodness-feature" class="ft-goodness-feature-section">
             <div class="container">
                 <div class="ft-section-title-2 headline pera-content text-center">
@@ -166,11 +132,9 @@
                 </div>
             </div>
         </section>
-        <!-- End of goodness feature section
-	============================================= -->
+        <!-- End of goodness feature section =============================== -->
 
-        <!-- Start of Video section
-	============================================= -->
+        <!-- Start of Video section ======================================== -->
         <section id="ft-video" class="ft-video-section">
             <div class="container">
                 <div class="ft-video-content position-relative">
@@ -192,41 +156,17 @@
                 </div>
             </div>
         </section>
-        <!-- End of Video section
-	============================================= -->
+        <!-- End of Video section ========================================== -->
 
-        <!-- Start of Testimonial section
-	============================================= -->
+        <!-- Start of Testimonial section ================================== -->
         <%- include("partials/testimonial") %>
-        <!-- End of Testimonial section
-	============================================= -->
+        <!-- End of Testimonial section ==================================== -->
 
-        <!-- Start of footer section
-	============================================= -->
-        <%- include('partials/footer') %>
-        <!-- End of footer section
-	============================================= -->
+        <!-- Start of footer section ======================================= -->
+        <%- include("partials/footer") %>
+        <!-- End of footer section ========================================= -->
 
-        <!-- For Js Library -->
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/jquery.magnific-popup.min.js"></script>
-        <script src="/js/appear.js"></script>
-        <script src="/js/slick.js"></script>
-        <script src="/js/jquery.counterup.min.js"></script>
-        <script src="/js/waypoints.min.js"></script>
-        <script src="/js/jquery.nice-select.min.js"></script>
-        <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="/js/wow.min.js"></script>
-        <script src="/js/imagesloaded.pkgd.min.js"></script>
-        <script src="/js/jquery.filterizr.js"></script>
-        <script src="/js/rbtools.min.js"></script>
-        <script src="/js/jquery.cssslider.min.js"></script>
-        <script src="/js/rs6.min.js"></script>
-        <script src="/js/knob.js"></script>
-        <script src="/js/script.js"></script>
-        <script src="/js/gmaps.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
+        <!-- For JS libraries -->
+        <%- include("partials/js-libraries") %>
     </body>
 </html>

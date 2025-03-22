@@ -1,44 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title><%= title %></title>
-        <meta name="description" content="FasTrans - Logistics & Delivery Company HTML template" />
-        <meta
-            name="keywords"
-            content="cargo, clean, contractor, corporate, freight, industry, localization, logistics, page builder, shipment, transport, transportation, truck, trucking"
-        />
-        <meta name="author" content="Themexriver" />
-        <link rel="shortcut icon" href="/img/logo/ficon.png" type="image/x-icon" />
-        <!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/fontawesome-all.css" />
-        <link rel="stylesheet" href="/css/flaticon.css" />
-        <link rel="stylesheet" href="/css/animate.css" />
-        <link rel="stylesheet" href="/css/nice-select.css" />
-        <link rel="stylesheet" href="/css/video.min.css" />
-        <link rel="stylesheet" href="/css/animated-slider.css" />
-        <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" href="/css/slick.css" />
-        <link rel="stylesheet" href="/css/rs6.css" />
-        <link rel="stylesheet" href="/css/slick-theme.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-    </head>
+    <%- include("partials/head") %>
     <body>
         <div id="preloader"></div>
         <div class="up">
             <a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
         </div>
-        <!-- Start of header section
-	============================================= -->
-        <%- include('partials/header') %>
-        <!-- End of header section
-	============================================= -->
+        <!-- Start of header section ======================================= -->
+        <%- include("partials/header") %>
+        <!-- End of header section ========================================= -->
 
-        <!-- Start of banner section
-	============================================= -->
+        <!-- Start of banner section ======================================= -->
         <section id="ft-banner" class="ft-banner-section" data-background="/img/bg/slider-bg.jpg">
             <div class="ft-banner-content">
                 <div class="container">
@@ -72,11 +44,9 @@
                 </div>
             </div>
         </section>
-        <!-- End of banner section
-	============================================= -->
+        <!-- End of banner section ========================================= -->
 
-        <!-- Start of featured section
-	============================================= -->
+        <!-- Start of featured section ===================================== -->
         <section id="ft-featured" class="ft-featured-section">
             <div class="container">
                 <div class="ft-section-title-2 headline pera-content text-center">
@@ -149,11 +119,9 @@
                 </div>
             </div>
         </section>
-        <!-- End of featured section
-	============================================= -->
+        <!-- End of featured section ======================================= -->
 
-        <!-- Start of Product mesurment section
-	============================================= -->
+        <!-- Start of Product mesurment section ============================ -->
         <section id="ft-product-mesurment" class="ft-product-mesurment-section">
             <div class="container">
                 <div class="ft-product-mesurment-content position-relative">
@@ -353,11 +321,9 @@
                 </div>
             </div>
         </section>
-        <!-- End of Product mesurment section
-	============================================= -->
+        <!-- End of Product mesurment section ============================== -->
 
-        <!-- Start of Service section
-	============================================= -->
+        <!-- Start of Service section ====================================== -->
         <section id="ft-service-2" class="ft-service-section-2 position-relative">
             <span class="ft-service-bg position-absolute"> <img src="/img/bg/ser-bg.png" alt="" /></span>
             <div class="container">
@@ -515,17 +481,13 @@
                 </div>
             </div>
         </section>
-        <!-- End of Service section
-	============================================= -->
+        <!-- End of Service section ======================================== -->
 
-        <!-- Start of About section
-	============================================= -->
+        <!-- Start of About section ======================================== -->
         <%- include("partials/about") %>
-        <!-- End of About section
-	============================================= -->
+        <!-- End of About section ========================================== -->
 
-        <!-- Start of Experience section
-	============================================= -->
+        <!-- Start of Experience section =================================== -->
         <section id="ft-experience" class="ft-experience-section">
             <div class="container">
                 <div class="ft-experience-content">
@@ -608,29 +570,21 @@
                 </div>
             </div>
         </section>
-        <!-- End of Experience section
-	============================================= -->
+        <!-- End of Experience section ===================================== -->
 
-        <!-- Start of Project section
-	============================================= -->
+        <!-- Start of Project section ====================================== -->
         <%- include("partials/project") %>
-        <!-- End of Project section
-	============================================= -->
+        <!-- End of Project section ======================================== -->
 
-        <!-- Start of Testimonial section
-	============================================= -->
+        <!-- Start of Testimonial section ================================== -->
         <%- include("partials/testimonial") %>
-        <!-- End of Testimonial section
-	============================================= -->
+        <!-- End of Testimonial section ==================================== -->
 
-        <!-- Start of FAQ section
-	============================================= -->
+        <!-- Start of FAQ section ========================================== -->
         <%- include("partials/faq") %>
-        <!-- End of FAQ section
-	============================================= -->
+        <!-- End of FAQ section ============================================ -->
 
-        <!-- Start of Blog section
-	============================================= -->
+        <!-- Start of Blog section ========================================= -->
         <section id="ft-blog-2" class="ft-blog-section-2 position-relative">
             <div class="container">
                 <div class="ft-section-title-2 headline pera-content text-center">
@@ -795,33 +749,13 @@
                 </div>
             </div>
         </section>
-        <!-- End of Blog section
-	============================================= -->
+        <!-- End of Blog section =========================================== -->
 
-        <!-- Start of footer section
-	============================================= -->
-        <%- include('partials/footer') %>
-        <!-- End of footer section
-	============================================= -->
+        <!-- Start of footer section ======================================= -->
+        <%- include("partials/footer") %>
+        <!-- End of footer section ========================================= -->
 
-        <!-- For Js Library -->
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/jquery.magnific-popup.min.js"></script>
-        <script src="/js/appear.js"></script>
-        <script src="/js/slick.js"></script>
-        <script src="/js/jquery.counterup.min.js"></script>
-        <script src="/js/waypoints.min.js"></script>
-        <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="/js/wow.min.js"></script>
-        <script src="/js/imagesloaded.pkgd.min.js"></script>
-        <script src="/js/jquery.filterizr.js"></script>
-        <script src="/js/rbtools.min.js"></script>
-        <script src="/js/jquery.cssslider.min.js"></script>
-        <script src="/js/rs6.min.js"></script>
-        <script src="/js/knob.js"></script>
-        <script src="/js/typer.js"></script>
-        <script src="/js/script.js"></script>
+        <!-- For JS libraries -->
+        <%- include("partials/js-libraries") %>
     </body>
 </html>

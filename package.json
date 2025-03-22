@@ -19,6 +19,7 @@
         "path": "^0.12.7"
     },
     "devDependencies": {
-        "prettier": "^3.5.3"
+        "prettier": "^3.5.3",
+        "prettier-plugin-ejs": "^1.0.3"
     }
 }
