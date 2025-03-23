@@ -5,146 +5,26 @@
     </div>
     <div class="ft-portfolio-content-2">
         <div class="ft-portfolio-slider-2">
+            <% projects.forEach((project, index) => { %>
             <div class="ft-portfolio-slider-item">
                 <div class="ft-portfolio-slider-innerbox position-relative">
                     <div class="ft-portfolio-img">
-                        <img src="/img/project/port1.jpg" alt="" />
+                        <img src="<%= project.image %>" alt="" />
                     </div>
                     <div class="ft-portfolio-text headline headline pera-content">
                         <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
+                            <a href="#"><%= project.name %></a>
                         </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
+                        <p><%= project.description %></p>
                         <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
+                            <a class="d-flex justify-content-center align-items-center" href="#"
                                 >Read More <i class="flaticon-right-arrow"></i
                             ></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="ft-portfolio-slider-item">
-                <div class="ft-portfolio-slider-innerbox position-relative">
-                    <div class="ft-portfolio-img">
-                        <img src="/img/project/port2.jpg" alt="" />
-                    </div>
-                    <div class="ft-portfolio-text headline headline pera-content">
-                        <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
-                        </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
-                        <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
-                                >Read More <i class="flaticon-right-arrow"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ft-portfolio-slider-item">
-                <div class="ft-portfolio-slider-innerbox position-relative">
-                    <div class="ft-portfolio-img">
-                        <img src="/img/project/port3.jpg" alt="" />
-                    </div>
-                    <div class="ft-portfolio-text headline headline pera-content">
-                        <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
-                        </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
-                        <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
-                                >Read More <i class="flaticon-right-arrow"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ft-portfolio-slider-item">
-                <div class="ft-portfolio-slider-innerbox position-relative">
-                    <div class="ft-portfolio-img">
-                        <img src="/img/project/port4.jpg" alt="" />
-                    </div>
-                    <div class="ft-portfolio-text headline headline pera-content">
-                        <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
-                        </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
-                        <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
-                                >Read More <i class="flaticon-right-arrow"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ft-portfolio-slider-item">
-                <div class="ft-portfolio-slider-innerbox position-relative">
-                    <div class="ft-portfolio-img">
-                        <img src="/img/project/port1.jpg" alt="" />
-                    </div>
-                    <div class="ft-portfolio-text headline headline pera-content">
-                        <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
-                        </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
-                        <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
-                                >Read More <i class="flaticon-right-arrow"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ft-portfolio-slider-item">
-                <div class="ft-portfolio-slider-innerbox position-relative">
-                    <div class="ft-portfolio-img">
-                        <img src="/img/project/port2.jpg" alt="" />
-                    </div>
-                    <div class="ft-portfolio-text headline headline pera-content">
-                        <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
-                        </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
-                        <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
-                                >Read More <i class="flaticon-right-arrow"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ft-portfolio-slider-item">
-                <div class="ft-portfolio-slider-innerbox position-relative">
-                    <div class="ft-portfolio-img">
-                        <img src="/img/project/port3.jpg" alt="" />
-                    </div>
-                    <div class="ft-portfolio-text headline headline pera-content">
-                        <h3>
-                            <a href="/project-details">Service & Aftermarket Logistics</a>
-                        </h3>
-                        <p>
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo vel facilisis.
-                        </p>
-                        <div class="ft-btn-3">
-                            <a class="d-flex justify-content-center align-items-center" href="portfolio-single.html"
-                                >Read More <i class="flaticon-right-arrow"></i
-                            ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <% }); %>
         </div>
     </div>
 </section>

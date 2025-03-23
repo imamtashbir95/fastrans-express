@@ -1,6 +1,6 @@
 {
     "name": "fastrans-express",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "main": "app.js",
     "scripts": {
         "dev": "nodemon server.js",

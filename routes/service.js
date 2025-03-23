@@ -1,30 +1,25 @@
 const express = require("express");
 const router = express.Router();
-
-const services = [
-    { name: "Road Freight", slug: "road-freight", image: "/img/service/ser4.2.jpg", icon: "flaticon-free-shipping" },
-    { name: "Ocean Freight", slug: "ocean-freight", image: "/img/service/ser4.3.jpg", icon: "flaticon-boat" },
-    { name: "Air Freight", slug: "air-freight", image: "/img/service/ser4.4.jpg", icon: "flaticon-plane" },
-    {
-        name: "Third Party Logistics",
-        slug: "third-party-logistics",
-        image: "/img/service/ser4.3.jpg",
-        icon: "flaticon-free-shipping",
-    },
-    { name: "Smart Warehousing", slug: "smart-warehousing", image: "/img/service/ser4.jpg", icon: "flaticon-boat" },
-    {
-        name: "Industry Solutions",
-        slug: "industry-solutions",
-        image: "/img/service/ser4.2.jpg",
-        icon: "flaticon-plane",
-    },
-    { name: "Custom Solutions", slug: "custom-solutions", image: "/img/service/ser4.3.jpg", icon: "flaticon-train" },
-];
+const services = require("../columns/services");
+const projects = require("../columns/projects");
 
 router.get("/service", (req, res) => {
+    const page = parseInt(req.query.page) || 1; // Default to page 1 if no page query parameter is provided
+    const itemsPerPage = 8; // Number of items to display per page
+    const totalItems = services.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    // Count index to slice the array
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedServices = services.slice(startIndex, endIndex);
+
     res.render("service", {
-        title: "Services | Fastrans",
-        services,
+        title: "Services | Agata Kargo Utama",
+        projects,
+        services: paginatedServices,
+        currentPage: page,
+        totalPages: totalPages,
         pageTitle: "Services",
         parentPage: null, // There is no parent page on the main page
     });
@@ -36,7 +31,9 @@ router.get("/service/:slug", (req, res) => {
         return res.status(404).send("Service not found");
     }
     res.render("service-details", {
-        title: `${service.name} | Fastrans`,
+        title: `${service.name} | Agata Kargo Utama`,
+        services,
+        service, // `service` object to access overview in EJS
         pageTitle: service.name,
         parentPage: "Service",
     });

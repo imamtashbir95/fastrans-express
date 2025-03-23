@@ -23,10 +23,7 @@
                                 <b>Everywhere</b>
                             </span>
                         </h1>
-                        <p>
-                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                            ultrices gravida.
-                        </p>
+                        <p>Supported by experts, priority air services, and a sufficient fleet for fast delivery.</p>
                         <div class="ft-banner-btn-wrapper d-flex justify-content-center align-items-center">
                             <div class="ft-banner-btn">
                                 <a class="d-flex justify-content-center align-items-center" href="/service"
@@ -53,7 +50,7 @@
                     <span class="sub-title">Featured</span>
                     <h2>
                         The unique qualities that make
-                        <span>FasTrans</span> special.
+                        <span>AKU</span> special.
                     </h2>
                 </div>
                 <div class="ft-featured-content">
@@ -65,11 +62,11 @@
                                 </div>
                                 <div class="ft-featured-text headline pera-content">
                                     <h3>
-                                        <a href="/service-details">Transparent Pricing</a>
+                                        <a href="#">Transparent Pricing</a>
                                     </h3>
-                                    <p>Incididunt ut labore et dolore magna aliqua. Quis ipsum gravida.</p>
+                                    <p>Clear and competitive pricing with no hidden costs, ensuring fairness and trust.</p>
                                     <div class="ft-btn-2">
-                                        <a href="/service-details">
+                                        <a href="#">
                                             <i class="icon-first flaticon-right-arrow"></i>
                                             <span>Read More</span>
                                         </a>
@@ -84,11 +81,11 @@
                                 </div>
                                 <div class="ft-featured-text headline pera-content">
                                     <h3>
-                                        <a href="/service-details">Real-Time Tracking</a>
+                                        <a href="#">Real-Time Tracking</a>
                                     </h3>
-                                    <p>Incididunt ut labore et dolore magna aliqua. Quis ipsum gravida.</p>
+                                    <p>Stay updated with live tracking for complete visibility of your shipments.</p>
                                     <div class="ft-btn-2">
-                                        <a href="/service-details">
+                                        <a href="#">
                                             <i class="icon-first flaticon-right-arrow"></i>
                                             <span>Read More</span>
                                         </a>
@@ -103,11 +100,11 @@
                                 </div>
                                 <div class="ft-featured-text headline pera-content">
                                     <h3>
-                                        <a href="/service-details">Warehouses Storage</a>
+                                        <a href="#">Warehouses Storage</a>
                                     </h3>
-                                    <p>Incididunt ut labore et dolore magna aliqua. Quis ipsum gravida.</p>
+                                    <p>Secure and well-managed warehouses to keep your goods safe before delivery.</p>
                                     <div class="ft-btn-2">
-                                        <a href="/service-details">
+                                        <a href="#">
                                             <i class="icon-first flaticon-right-arrow"></i>
                                             <span>Read More</span>
                                         </a>
@@ -305,7 +302,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="ft-pm-input">
-                                                                <input type="text" placeholder="Your Tracking Id" />
+                                                                <input type="text" placeholder="Your Tracking ID" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -333,150 +330,30 @@
                 </div>
                 <div class="ft-service-content-2">
                     <div class="ft-service-slider-2">
+                        <% services.forEach((service, index) => { %>
                         <div class="ft-item-innerbox">
                             <div class="ft-service-innerbox-2 position-relative">
                                 <div class="ft-service-img text-center">
-                                    <img src="/img/service/ser4.3.jpg" alt="" />
+                                    <img src="<%= service.image %>" alt="" />
                                 </div>
                                 <div class="ft-service-text position-relative headline">
                                     <div
                                         class="ft-service-icon position-absolute d-flex align-items-center justify-content-center"
                                     >
-                                        <i class="flaticon-free-shipping"></i>
+                                        <i class="<%= service.icon %>"></i>
                                     </div>
-                                    <h3>
-                                        <a href="/service-details">Road Freight</a>
-                                    </h3>
+                                    <h3><a href="#"><%= service.name %></a></h3>
                                     <div class="ft-btn-2">
-                                        <a href="/service-details">
+                                        <a href="/service/<%= service.slug %>">
                                             <i class="icon-first flaticon-right-arrow"></i>
                                             <span>Read More</span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="ft-service-serial position-absolute">1</div>
+                                <div class="ft-service-serial position-absolute"><%= index + 1 %></div>
                             </div>
                         </div>
-                        <div class="ft-item-innerbox">
-                            <div class="ft-service-innerbox-2 position-relative">
-                                <div class="ft-service-img text-center">
-                                    <img src="/img/service/ser4.4.jpg" alt="" />
-                                </div>
-                                <div class="ft-service-text position-relative headline">
-                                    <div
-                                        class="ft-service-icon position-absolute d-flex align-items-center justify-content-center"
-                                    >
-                                        <i class="flaticon-boat"></i>
-                                    </div>
-                                    <h3>
-                                        <a href="/service-details">Ocean Freight</a>
-                                    </h3>
-                                    <div class="ft-btn-2">
-                                        <a href="/service-details">
-                                            <i class="icon-first flaticon-right-arrow"></i>
-                                            <span>Read More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ft-service-serial position-absolute">2</div>
-                            </div>
-                        </div>
-                        <div class="ft-item-innerbox">
-                            <div class="ft-service-innerbox-2 position-relative">
-                                <div class="ft-service-img text-center">
-                                    <img src="/img/service/ser4.2.jpg" alt="" />
-                                </div>
-                                <div class="ft-service-text position-relative headline">
-                                    <div
-                                        class="ft-service-icon position-absolute d-flex align-items-center justify-content-center"
-                                    >
-                                        <i class="flaticon-plane"></i>
-                                    </div>
-                                    <h3>
-                                        <a href="/service-details">Air Freight</a>
-                                    </h3>
-                                    <div class="ft-btn-2">
-                                        <a href="/service-details">
-                                            <i class="icon-first flaticon-right-arrow"></i>
-                                            <span>Read More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ft-service-serial position-absolute">3</div>
-                            </div>
-                        </div>
-                        <div class="ft-item-innerbox">
-                            <div class="ft-service-innerbox-2 position-relative">
-                                <div class="ft-service-img text-center">
-                                    <img src="/img/service/ser4.jpg" alt="" />
-                                </div>
-                                <div class="ft-service-text position-relative headline">
-                                    <div
-                                        class="ft-service-icon position-absolute d-flex align-items-center justify-content-center"
-                                    >
-                                        <i class="flaticon-train"></i>
-                                    </div>
-                                    <h3>
-                                        <a href="/service-details">Cargo Freight</a>
-                                    </h3>
-                                    <div class="ft-btn-2">
-                                        <a href="/service-details">
-                                            <i class="icon-first flaticon-right-arrow"></i>
-                                            <span>Read More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ft-service-serial position-absolute">4</div>
-                            </div>
-                        </div>
-                        <div class="ft-item-innerbox">
-                            <div class="ft-service-innerbox-2 position-relative">
-                                <div class="ft-service-img text-center">
-                                    <img src="/img/service/ser4.3.jpg" alt="" />
-                                </div>
-                                <div class="ft-service-text position-relative headline">
-                                    <div
-                                        class="ft-service-icon position-absolute d-flex align-items-center justify-content-center"
-                                    >
-                                        <i class="flaticon-free-shipping"></i>
-                                    </div>
-                                    <h3>
-                                        <a href="/service-details">Road Freight</a>
-                                    </h3>
-                                    <div class="ft-btn-2">
-                                        <a href="/service-details">
-                                            <i class="icon-first flaticon-right-arrow"></i>
-                                            <span>Read More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ft-service-serial position-absolute">5</div>
-                            </div>
-                        </div>
-                        <div class="ft-item-innerbox">
-                            <div class="ft-service-innerbox-2 position-relative">
-                                <div class="ft-service-img text-center">
-                                    <img src="/img/service/ser4.4.jpg" alt="" />
-                                </div>
-                                <div class="ft-service-text position-relative headline">
-                                    <div
-                                        class="ft-service-icon position-absolute d-flex align-items-center justify-content-center"
-                                    >
-                                        <i class="flaticon-boat"></i>
-                                    </div>
-                                    <h3>
-                                        <a href="/service-details">Ocean Freight</a>
-                                    </h3>
-                                    <div class="ft-btn-2">
-                                        <a href="/service-details">
-                                            <i class="icon-first flaticon-right-arrow"></i>
-                                            <span>Read More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ft-service-serial position-absolute">6</div>
-                            </div>
-                        </div>
+                        <% }); %>
                     </div>
                 </div>
             </div>
@@ -484,7 +361,7 @@
         <!-- End of Service section ======================================== -->
 
         <!-- Start of About section ======================================== -->
-        <%- include("partials/about") %>
+        <%- include("partials/about", { showExplore: true }) %>
         <!-- End of About section ========================================== -->
 
         <!-- Start of Experience section =================================== -->
@@ -585,7 +462,7 @@
         <!-- End of FAQ section ============================================ -->
 
         <!-- Start of Blog section ========================================= -->
-        <section id="ft-blog-2" class="ft-blog-section-2 position-relative">
+        <!-- <section id="ft-blog-2" class="ft-blog-section-2 position-relative">
             <div class="container">
                 <div class="ft-section-title-2 headline pera-content text-center">
                     <span class="sub-title">Blog</span>
@@ -748,7 +625,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- End of Blog section =========================================== -->
 
         <!-- Start of footer section ======================================= -->

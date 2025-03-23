@@ -1,31 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title><%= title %></title>
-        <meta name="description" content="FasTrans - Logistics & Delivery Company HTML template" />
-        <meta
-            name="keywords"
-            content="cargo, clean, contractor, corporate, freight, industry, localization, logistics, page builder, shipment, transport, transportation, truck, trucking"
-        />
-        <meta name="author" content="Themexriver" />
-        <link rel="shortcut icon" href="/img/logo/ficon.png" type="image/x-icon" />
-        <!-- Mobile Specific Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/fontawesome-all.css" />
-        <link rel="stylesheet" href="/css/flaticon.css" />
-        <link rel="stylesheet" href="/css/animate.css" />
-        <link rel="stylesheet" href="/css/nice-select.css" />
-        <link rel="stylesheet" href="/css/video.min.css" />
-        <link rel="stylesheet" href="/css/animated-slider.css" />
-        <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css" />
-        <link rel="stylesheet" href="/css/slick.css" />
-        <link rel="stylesheet" href="/css/rs6.css" />
-        <link rel="stylesheet" href="/css/slick-theme.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-    </head>
+    <%- include("partials/head") %>
     <body>
         <div id="preloader"></div>
         <div class="up">
@@ -55,13 +30,9 @@
                                     <div class="service-category-widget">
                                         <h3 class="widget-title">All Service</h3>
                                         <ul>
-                                            <li><a href="/service-details">Road Freight </a></li>
-                                            <li><a href="/service-details">Ocean Freight </a></li>
-                                            <li><a href="/service-details">Air Freight </a></li>
-                                            <li><a href="/service-details">Third Party Logistics </a></li>
-                                            <li><a href="/service-details">Smart Warehousing </a></li>
-                                            <li><a href="/service-details">Industry Solutions </a></li>
-                                            <li><a href="/service-details">Custom Solutions </a></li>
+                                            <% services.forEach((service, index) => { %>
+                                            <li><a href="/service/<%= service.slug %>"><%= service.name %></a></li>
+                                            <% }); %>
                                         </ul>
                                     </div>
                                 </div>
@@ -98,43 +69,34 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="ft-service-details-img">
-                                                <img src="/img/service/sd1.jpg" alt="" />
+                                                <img src="<%= service.detailsImages.image1 %>" alt="" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="ft-service-details-img">
-                                                <img src="/img/service/sd2.jpg" alt="" />
+                                                <img src="<%= service.detailsImages.image2 %>" alt="" />
                                             </div>
                                             <div class="ft-service-details-img">
-                                                <img src="/img/service/sd3.jpg" alt="" />
+                                                <img src="<%= service.detailsImages.image3 %>" alt="" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ft-service-details-text-wrapper">
                                     <h3>Overview</h3>
-                                    <p>
-                                        ur airfreight staff attaches great importance to customizing the booking process
-                                        for our customers. That’s why we strive to find the air freight solution that
-                                        best suits your needs. We’ll ask you when the freight is available, what the
-                                        required delivery date is, and if there’s potential to save on time or cost.
-                                        Your answers to these and other questions help us decide if you should book the
-                                        air freight as direct. We’ll also see if our sea-air service is a better
-                                        solution for you.
-                                    </p>
-                                    <p>
-                                        We have more than twenty years of experience. During that time, we’ve become
-                                        expert in freight transportation by air and all its related services. We work
-                                        closely with all major airlines around the world. Ongoing negotiations ensure
-                                        that we always have the cargo space we need and the ability to offer you
-                                        competitive rates – even during the high season.
-                                    </p>
-                                    <p>
-                                        Where possible, we’ll erect and dismantle Unit Load Devices (ULDs), reducing
-                                        significantly the risk of damage to your shipment and saving you time and
-                                        expense. We can do this because many of our freight stations have their own
-                                        ground transportation at or around the airport.
-                                    </p>
+                                    <% if (service.overview.p1 || service.overview.p2 || service.overview.p3) { %>
+                                    <% if (service.overview.p1) { %>
+                                    <p><%= service.overview.p1 %></p>
+                                    <% } %>
+                                    <% if (service.overview.p2) { %>
+                                    <p><%= service.overview.p2 %></p>
+                                    <% } %>
+                                    <% if (service.overview.p3) { %>
+                                    <p><%= service.overview.p3 %></p>
+                                    <% } %>
+                                    <% } else { %>
+                                    <p>No overview available for this service at the moment.</p>
+                                    <% } %>
                                     <div class="ft-service-details-counter-wrapper">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -160,7 +122,9 @@
                                                     </div>
                                                     <div class="ft-service-details-count-text">
                                                         <h4 class="title text-uppercase">WE HANDLED</h4>
-                                                        <h4 class="count-number"><span class="counter">2000</span>+</h4>
+                                                        <h4 class="count-number">
+                                                            <span class="counter">24000</span>+
+                                                        </h4>
                                                         <p>Tons of air freight annually</p>
                                                     </div>
                                                 </div>
@@ -169,9 +133,9 @@
                                     </div>
                                     <h3>How It Works</h3>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                        gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                        At AGATA KARGO UTAMA, we simplify the shipping process with efficient, secure,
+                                        and timely logistics solutions. Our step-by-step approach ensures that every
+                                        shipment is handled with care and precision, from booking to final delivery.
                                     </p>
                                     <div class="ft-video-content position-relative">
                                         <div class="ft-video-img-play-btn">
