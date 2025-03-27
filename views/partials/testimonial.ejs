@@ -13,228 +13,35 @@
             <div class="ft-testimonial-slider-2">
                 <div class="choose_slider_items ul-li choose_slider">
                     <ul id="mySlider1">
+                        <% testimonials.forEach((testimonial, index) => { %>
                         <li class="current_item">
                             <div class="ft-testimonial-innerbox-item-2 text-center">
                                 <div class="ft-testimonial-img">
-                                    <img src="/img/testimonial/test2.1.jpg" alt="" />
+                                    <img src="<%= testimonial.clientPhoto %>" alt="" />
                                 </div>
                                 <div class="ft-testimonial-text headline pera-content">
                                     <div class="ft-testimonial-meta">
-                                        <h3>Andi Wijaya</h3>
-                                        <span>Satisfied Customer</span>
+                                        <h3><%= testimonial.clientName %></h3>
+                                        <span><%= testimonial.clientDesignation %></span>
                                     </div>
-                                    <p>
-                                        I needed to send an urgent package, and AKU delivered it faster than expected.
-                                        Their service is top-notch and hassle-free!
-                                    </p>
+                                    <p><%= testimonial.testimonial %></p>
                                     <div class="ft-testimonial-rate ul-li">
                                         <ul>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
+                                            <% for (let i = 0; i < testimonial.rating; i++) { %>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <% } %>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="current_item">
-                            <div class="ft-testimonial-innerbox-item-2 text-center">
-                                <div class="ft-testimonial-img">
-                                    <img src="/img/testimonial/test2.1.jpg" alt="" />
-                                </div>
-                                <div class="ft-testimonial-text headline pera-content">
-                                    <div class="ft-testimonial-meta">
-                                        <h3>Andi Wijaya</h3>
-                                        <span>Satisfied Customer</span>
-                                    </div>
-                                    <p>
-                                        I needed to send an urgent package, and AKU delivered it faster than expected.
-                                        Their service is top-notch and hassle-free!
-                                    </p>
-                                    <div class="ft-testimonial-rate ul-li">
-                                        <ul>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="current_item">
-                            <div class="ft-testimonial-innerbox-item-2 text-center">
-                                <div class="ft-testimonial-img">
-                                    <img src="/img/testimonial/test2.1.jpg" alt="" />
-                                </div>
-                                <div class="ft-testimonial-text headline pera-content">
-                                    <div class="ft-testimonial-meta">
-                                        <h3>Andi Wijaya</h3>
-                                        <span>Satisfied Customer</span>
-                                    </div>
-                                    <p>
-                                        I needed to send an urgent package, and AKU delivered it faster than expected.
-                                        Their service is top-notch and hassle-free!
-                                    </p>
-                                    <div class="ft-testimonial-rate ul-li">
-                                        <ul>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="current_item">
-                            <div class="ft-testimonial-innerbox-item-2 text-center">
-                                <div class="ft-testimonial-img">
-                                    <img src="/img/testimonial/test2.1.jpg" alt="" />
-                                </div>
-                                <div class="ft-testimonial-text headline pera-content">
-                                    <div class="ft-testimonial-meta">
-                                        <h3>Andi Wijaya</h3>
-                                        <span>Satisfied Customer</span>
-                                    </div>
-                                    <p>
-                                        I needed to send an urgent package, and AKU delivered it faster than expected.
-                                        Their service is top-notch and hassle-free!
-                                    </p>
-                                    <div class="ft-testimonial-rate ul-li">
-                                        <ul>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="current_item">
-                            <div class="ft-testimonial-innerbox-item-2 text-center">
-                                <div class="ft-testimonial-img">
-                                    <img src="/img/testimonial/test2.1.jpg" alt="" />
-                                </div>
-                                <div class="ft-testimonial-text headline pera-content">
-                                    <div class="ft-testimonial-meta">
-                                        <h3>Andi Wijaya</h3>
-                                        <span>Satisfied Customer</span>
-                                    </div>
-                                    <p>
-                                        I needed to send an urgent package, and AKU delivered it faster than expected.
-                                        Their service is top-notch and hassle-free!
-                                    </p>
-                                    <div class="ft-testimonial-rate ul-li">
-                                        <ul>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="current_item">
-                            <div class="ft-testimonial-innerbox-item-2 text-center">
-                                <div class="ft-testimonial-img">
-                                    <img src="/img/testimonial/test2.1.jpg" alt="" />
-                                </div>
-                                <div class="ft-testimonial-text headline pera-content">
-                                    <div class="ft-testimonial-meta">
-                                        <h3>Andi Wijaya</h3>
-                                        <span>Satisfied Customer</span>
-                                    </div>
-                                    <p>
-                                        I needed to send an urgent package, and AKU delivered it faster than expected.
-                                        Their service is top-notch and hassle-free!
-                                    </p>
-                                    <div class="ft-testimonial-rate ul-li">
-                                        <ul>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-star"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        <% }); %>
                     </ul>
                     <div>
-                        <a id="btn_next1" href="#"><i class="far fa-arrow-right"></i></a>
+                        <a id="btn_next1" href="#" aria-label="Next slide"><i class="far fa-arrow-right"></i></a>
                     </div>
                     <div>
-                        <a id="btn_prev1" href="#"><i class="far fa-arrow-left"></i></a>
+                        <a id="btn_prev1" href="#" aria-label="Previous slide"><i class="far fa-arrow-left"></i></a>
                     </div>
                 </div>
             </div>

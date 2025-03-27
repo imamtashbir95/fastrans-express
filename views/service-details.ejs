@@ -31,7 +31,7 @@
                                         <h3 class="widget-title">All Service</h3>
                                         <ul>
                                             <% services.forEach((service, index) => { %>
-                                            <li><a href="/service/<%= service.slug %>"><%= service.name %></a></li>
+                                            <li><a href="/service/<%= service.slug %>" aria-label="<%= service.name %> service"><%= service.name %></a></li>
                                             <% }); %>
                                         </ul>
                                     </div>

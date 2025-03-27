@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="ft-project-details-img">
-                                <img src="/img/project/prd.jpg" alt="" />
+                                <img src="<%= currentProject.projectDetails.image %>" alt="" />
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -32,14 +32,12 @@
                                 <div class="ft-portfolio-overview-list-value">
                                     <div class="ft-portfolio-overview-list ul-li-block">
                                         <ul>
-                                            <li>Name: <span>Rob’s house</span></li>
-                                            <li>Date: <span>24th March 2022</span></li>
-                                            <li>Author: <span>Marilin De Aragon</span></li>
-                                            <li>Tag: <span>Cleaning, Plumbing</span></li>
+                                            <li>Date: <span><%= currentProject.projectDetails.date %></span></li>
+                                            <li>Tag: <span><%= currentProject.projectDetails.tag %></span></li>
                                         </ul>
                                     </div>
                                     <div class="ft-project-value ul-li">
-                                        <span>Value: $125</span>
+                                        <span>Value: <%= currentProject.projectDetails.value %></span>
                                         <ul>
                                             <li><i class="fas fa-star"></i></li>
                                             <li><i class="fas fa-star"></i></li>
@@ -54,13 +52,11 @@
                     </div>
                 </div>
                 <div class="ft-project-overview-text-wrapper headline pera-content">
-                    <h3>Service & Aftermarket Logistics</h3>
+                    <h3><%= currentProject.name %></h3>
                     <p>
-                        Purchasing from select family farmers who farm organically because they believe in it and so we
-                        do. We are conscious of air miles and our carbon footprint so a lot of our produce comes from
-                        Egypt. Lorem ipsum is simply free text used by copytyping refreshing.
+                        <%= currentProject.description %>
                     </p>
-                    <div class="ft-project-overview-comment-list">
+                    <!-- <div class="ft-project-overview-comment-list">
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="ft-project-overview-list-item ul-li-block">
@@ -98,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -111,69 +107,28 @@
                     <h2>Similar Work</h2>
                     <div class="ft-similar-work-items">
                         <div class="row">
+                            <% projects.forEach((project) => { %>
+                            <% if (project.slug !== currentProject.slug) { %>
                             <div class="col-lg-4 col-sm-6">
                                 <div class="ft-portfolio-slider-innerbox position-relative">
                                     <div class="ft-portfolio-img">
-                                        <img src="/img/project/port1.jpg" alt="" />
+                                        <img src="<%= project.image %>" alt="" />
                                     </div>
                                     <div class="ft-portfolio-text headline headline pera-content">
-                                        <h3><a href="/project-details">Service & Aftermarket Logistics</a></h3>
-                                        <p>
-                                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                                            facilisis.
-                                        </p>
+                                        <h3><a href="/project/<%= project.slug %>"><%= project.name %></a></h3>
+                                        <p><%= project.description %></p>
                                         <div class="ft-btn-3">
                                             <a
                                                 class="d-flex justify-content-center align-items-center"
-                                                href="#.html"
+                                                href="/project/<%= project.slug %>"
                                                 >Read More <i class="flaticon-right-arrow"></i
                                             ></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="ft-portfolio-slider-innerbox position-relative">
-                                    <div class="ft-portfolio-img">
-                                        <img src="/img/project/port2.jpg" alt="" />
-                                    </div>
-                                    <div class="ft-portfolio-text headline headline pera-content">
-                                        <h3><a href="/project-details">Service & Aftermarket Logistics</a></h3>
-                                        <p>
-                                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                                            facilisis.
-                                        </p>
-                                        <div class="ft-btn-3">
-                                            <a
-                                                class="d-flex justify-content-center align-items-center"
-                                                href="#.html"
-                                                >Read More <i class="flaticon-right-arrow"></i
-                                            ></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="ft-portfolio-slider-innerbox position-relative">
-                                    <div class="ft-portfolio-img">
-                                        <img src="/img/project/port3.jpg" alt="" />
-                                    </div>
-                                    <div class="ft-portfolio-text headline headline pera-content">
-                                        <h3><a href="/project-details">Service & Aftermarket Logistics</a></h3>
-                                        <p>
-                                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                                            facilisis.
-                                        </p>
-                                        <div class="ft-btn-3">
-                                            <a
-                                                class="d-flex justify-content-center align-items-center"
-                                                href="#.html"
-                                                >Read More <i class="flaticon-right-arrow"></i
-                                            ></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <% } %>
+                            <% }); %>
                         </div>
                     </div>
                 </div>

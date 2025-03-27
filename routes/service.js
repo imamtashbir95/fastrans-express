@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const faqs = require("../columns/faqs");
 const services = require("../columns/services");
 const projects = require("../columns/projects");
 
@@ -16,6 +17,7 @@ router.get("/service", (req, res) => {
 
     res.render("service", {
         title: "Services | Agata Kargo Utama",
+        faqs,
         projects,
         services: paginatedServices,
         currentPage: page,

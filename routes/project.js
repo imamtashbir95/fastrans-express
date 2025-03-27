@@ -20,7 +20,9 @@ router.get("/project/:slug", (req, res) => {
     }
     res.render("project-details", {
         title: `${project.name} | Agata Kargo Utama`,
+        projects,
         services,
+        currentProject: project,
         pageTitle: project.name,
         parentPage: "Project",
     });
